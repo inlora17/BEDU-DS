@@ -1,3 +1,6 @@
+#Ingrid López Ramos
+# ingridlopez262@gmail.com
+
 #RETO 1
 ----- Tipos de datos
 # int
