@@ -1,3 +1,6 @@
+#Ingrid López Ramos
+#ingridlopez262@gmail.com
+
 #Reto 1
 -- artículos incluyen la palabra Pasta en su nombre
 SELECT * 
