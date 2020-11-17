@@ -1,0 +1,81 @@
+SESIÓN 4 
+
+RETO 1
+
+---Fecha, nombre y texto de cada comentario.
+
+
+{
+ project: {
+  date: 1,
+  name: 1,
+  text: 1
+ }
+}
+
+---Título, elenco y año de cada película.
+
+{
+ project: {
+  title: 1,
+  cast: 1,
+  year: 1,
+  _id: 0
+ }
+}
+
+---Nombre y contraseña de cada usuario.
+{
+ project: {
+  name: 1,
+  password: 1,
+  _id: 0
+ }
+}
+
+RETO 2
+
+------¿Qué comentarios ha hecho Greg Powell?
+{
+ filter: {
+  name: 'Greg Powell'
+ }
+}
+------¿Qué comentarios han hecho Greg Powell o Mercedes Tyler?
+{
+ filter: {
+  $or: 
+  [
+   {
+    name: 'Greg Powell'
+   },
+   {
+    name: 'Mercedes Tyler'
+   }
+  ]
+ }
+}
+
+---¿Cuál es el máximo número de comentarios en una película?
+{
+ project: {
+  num_mflix_comments: 1,
+  title: 1
+ },
+ sort: {
+  num_mflix_comments: -1
+ },
+ limit: 1
+}
+
+---¿Cuál es título de las cinco películas más comentadas?
+{
+ project: {
+  num_mflix_comments: 1,
+  title: 1
+ },
+ sort: {
+  num_mflix_comments: -1
+ },
+ limit: 5
+}
